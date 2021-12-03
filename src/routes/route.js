@@ -2,8 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/test-me', function (req, res) {
-    res.send(`${a+b}`)
-});
+const schedulerController = require('../controllers/scheduleController')
+
+router.post('/test', schedulerController.scheduled);
 
 module.exports = router;
